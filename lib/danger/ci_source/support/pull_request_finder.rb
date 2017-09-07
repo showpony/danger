@@ -118,7 +118,6 @@ module Danger
     def api_url
       ENV.fetch("DANGER_GITHUB_API_HOST") do
         ENV.fetch("DANGER_GITHUB_API_BASE_URL") do
-          "https://api.github.com/".freeze
         end
       end
     end
