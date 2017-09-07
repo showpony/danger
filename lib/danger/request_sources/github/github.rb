@@ -34,7 +34,8 @@ module Danger
       end
 
       def validates_as_api_source?
-        (@token && !@token.empty?) || self.environment["DANGER_USE_LOCAL_GIT"]
+        true
+        # (@token && !@token.empty?) || self.environment["DANGER_USE_LOCAL_GIT"]
       end
 
       def scm
