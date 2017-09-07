@@ -83,15 +83,15 @@ module Danger
     private
 
     def get_repo_source()
-      if ENV["DANGER_GITHUB_API_TOKEN"]
+      # if ENV["DANGER_GITHUB_API_TOKEN"]
         RequestSources::GitHub
-      elsif ENV["DANGER_GITLAB_API_TOKEN"]
-        RequestSources::GitLab
-      elsif ENV["DANGER_BITBUCKETCLOUD_USERNAME"] && ENV["DANGER_BITBUCKETCLOUD_PASSWORD"]
-        RequestSources::BitbucketCloud
-      elsif ENV["DANGER_BITBUCKETSERVER_USERNAME"] && ENV["DANGER_BITBUCKETSERVER_PASSWORD"] && ENV["DANGER_BITBUCKETSERVER_HOST"]
-        RequestSources::BitbucketServer
-      end
+      # elsif ENV["DANGER_GITLAB_API_TOKEN"]
+      #   RequestSources::GitLab
+      # elsif ENV["DANGER_BITBUCKETCLOUD_USERNAME"] && ENV["DANGER_BITBUCKETCLOUD_PASSWORD"]
+      #   RequestSources::BitbucketCloud
+      # elsif ENV["DANGER_BITBUCKETSERVER_USERNAME"] && ENV["DANGER_BITBUCKETSERVER_PASSWORD"] && ENV["DANGER_BITBUCKETSERVER_HOST"]
+      #   RequestSources::BitbucketServer
+      # end
     end
 
     def extract_title_and_subtitle_from_source(repo_url)
