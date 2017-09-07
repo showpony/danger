@@ -101,7 +101,7 @@ module Danger
         title = "For your #{source.source_name} repo, you need to expose: " + source.env_vars.join(", ").yellow
         subtitle = "You may also need: #{source.optional_env_vars.join(', ')}" if source.optional_env_vars.any?
       else
-        title = "For Danger to run on this project, you need to expose a set of following the ENV vars:\n#{RequestSources::RequestSource.available_source_names_and_envs.join("\n")}"
+        title = "-M&M was here- For Danger to run on this project, you need to expose a set of following the ENV vars:\n#{RequestSources::RequestSource.available_source_names_and_envs.join("\n")}"
       end
 
       [title, (subtitle || "")]
